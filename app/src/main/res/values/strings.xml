@@ -102,5 +102,6 @@
     <string name="title_activity_morning">MorningActivity</string>
     <string name="title_activity_afternoon">AfternoonActivity</string>
     <string name="title_activity_evening">EveningActivity</string>
+    <string name="title_activity_main_basic">MainActivityBasic</string>
 
 </resources>

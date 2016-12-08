@@ -26,6 +26,11 @@
         <activity
             android:name=".EveningActivity"
             android:label="@string/title_activity_evening"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SplashScreen" />
+        <activity
+            android:name=".MainActivityBasic"
+            android:label="@string/title_activity_main_basic"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

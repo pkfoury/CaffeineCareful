@@ -31,16 +31,6 @@
         android:id="@+id/seekBar9"
         android:layout_width="300dp" />
 
-    <TextView
-        android:text="How much caffiene have you had?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:id="@+id/textView12"
-        android:textSize="30sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
-
     <SeekBar
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -64,5 +54,15 @@
         android:layout_below="@+id/seekBar9"
         android:layout_alignEnd="@+id/textView21"
         android:id="@+id/textView22" />
+
+    <TextView
+        android:text="How much caffiene have you had?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:id="@+id/textView12"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/seekBar4" />
 
 </RelativeLayout>

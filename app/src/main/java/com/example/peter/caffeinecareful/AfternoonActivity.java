@@ -43,7 +43,7 @@ public class AfternoonActivity extends AppCompatActivity {
         });
 
         SeekBar seekBar3 = (SeekBar) findViewById(R.id.seekBar8);
-        seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
                 int CurrentLevel = seekBar.getProgress();
                 String CurrentLevelString = Integer.toString(CurrentLevel);
