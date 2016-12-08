@@ -44,15 +44,32 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        Button predictButton = (Button) findViewById(R.id.button2);
-        predictButton.setOnClickListener(new View.OnClickListener() {
+        Button morningButton = (Button) findViewById(R.id.button4);
+        morningButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent myIntent = new Intent(MainActivity.this, PredictionActivity.class);
+                Intent myIntent = new Intent(MainActivity.this, MorningActivity.class);
                 startActivity(myIntent);
             }
         });
 
+        Button afternoonButton = (Button) findViewById(R.id.button3);
+        afternoonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, AfternoonActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Button eveningButton = (Button) findViewById(R.id.button2);
+        eveningButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, EveningActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
     }
 

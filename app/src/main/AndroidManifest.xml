@@ -16,14 +16,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PredictionActivity"
-            android:label="@string/title_activity_prediction"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.peter.caffeinecareful.MainActivity" />
-        </activity>
+            android:name=".MorningActivity"
+            android:label="@string/title_activity_morning"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AfternoonActivity"
+            android:label="@string/title_activity_afternoon"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".EveningActivity"
+            android:label="@string/title_activity_evening"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

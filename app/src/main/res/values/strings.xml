@@ -95,5 +95,12 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_main22">Main22Activity</string>
+    <string name="title_activity_prediction_drawer">PredictionDrawerActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_morning">MorningActivity</string>
+    <string name="title_activity_afternoon">AfternoonActivity</string>
+    <string name="title_activity_evening">EveningActivity</string>
 
 </resources>
