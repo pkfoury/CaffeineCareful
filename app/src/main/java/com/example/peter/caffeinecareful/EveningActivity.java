@@ -18,7 +18,7 @@ public class EveningActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar9);
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar14);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
                 int CurrentLevel = seekBar.getProgress();
@@ -30,7 +30,7 @@ public class EveningActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){}
         });
 
-        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar4);
+        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar13);
         seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
                 int CurrentLevel = seekBar.getProgress();

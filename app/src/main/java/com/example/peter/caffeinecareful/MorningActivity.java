@@ -1,6 +1,9 @@
 package com.example.peter.caffeinecareful;
 
+import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -21,7 +24,7 @@ public class MorningActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar2);
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar15);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int CurrentLevel = seekBar.getProgress();
@@ -37,7 +40,7 @@ public class MorningActivity extends AppCompatActivity {
             }
         });
 
-        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar3);
+        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar16);
         seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int CurrentLevel = seekBar.getProgress();
@@ -53,7 +56,7 @@ public class MorningActivity extends AppCompatActivity {
             }
         });
 
-        SeekBar seekBar3 = (SeekBar) findViewById(R.id.seekBar6);
+        SeekBar seekBar3 = (SeekBar) findViewById(R.id.seekBar17);
         seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int CurrentLevel = seekBar.getProgress();
@@ -74,25 +77,8 @@ public class MorningActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AlertDialog.Builder builder = new AlertDialog.Builder(new MorningActivity());
-                builder.setMessage("Fire missiles");
-                builder.setPositiveButton("Fire", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // FIRE!
-                    }
-                });
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int id) {
-                        // User cancelled the dialog
-                    }
-                });
-                // Create the AlertDialog object and return it
-                builder.create();
-
-                /**
-                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                 .setAction("Action", null).show();
-                 */
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
     }

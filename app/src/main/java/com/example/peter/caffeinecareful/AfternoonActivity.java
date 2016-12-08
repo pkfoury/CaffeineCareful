@@ -18,7 +18,7 @@ public class AfternoonActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar5);
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar10);
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
                 int CurrentLevel = seekBar.getProgress();
@@ -26,11 +26,12 @@ public class AfternoonActivity extends AppCompatActivity {
                 TextView textView = (TextView) findViewById(R.id.textView18);
                 textView.setText(CurrentLevelString);
             }
+
             public void onStartTrackingTouch(SeekBar seekBar){}
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){}
         });
 
-        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar7);
+        SeekBar seekBar2 = (SeekBar) findViewById(R.id.seekBar11);
         seekBar2.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
                 int CurrentLevel = seekBar.getProgress();
@@ -42,7 +43,7 @@ public class AfternoonActivity extends AppCompatActivity {
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){}
         });
 
-        SeekBar seekBar3 = (SeekBar) findViewById(R.id.seekBar8);
+        SeekBar seekBar3 = (SeekBar) findViewById(R.id.seekBar12);
         seekBar3.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
                 int CurrentLevel = seekBar.getProgress();

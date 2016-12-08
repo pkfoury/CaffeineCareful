@@ -8,13 +8,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivityBasic"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".MainActivity" />
+
         <activity
             android:name=".MorningActivity"
             android:label="@string/title_activity_morning"
@@ -28,10 +34,7 @@
             android:label="@string/title_activity_evening"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SplashScreen" />
-        <activity
-            android:name=".MainActivityBasic"
-            android:label="@string/title_activity_main_basic"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

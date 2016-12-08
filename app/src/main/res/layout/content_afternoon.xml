@@ -33,20 +33,24 @@
             android:layout_alignStart="@+id/seekBar5" />
 
         <SeekBar
-            android:layout_height="wrap_content"
-            android:id="@+id/seekBar5"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
-            android:layout_below="@+id/textView9"
-            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:max="10"
+            android:progress="3"
+            android:id="@+id/seekBar10"
             android:layout_marginTop="16dp" />
 
         <TextView
-            android:text="TextView"
+            android:text="3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBar5"
             android:layout_centerHorizontal="true"
-            android:id="@+id/textView18" />
+            android:id="@+id/textView18"
+            android:layout_marginTop="16dp"
+            android:textStyle="normal|bold"
+            android:textSize="20sp" />
 
         <TextView
             android:text="How many cups \nthis morning?"
@@ -60,21 +64,24 @@
             android:textIsSelectable="false" />
 
         <SeekBar
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView10"
-            android:layout_alignStart="@+id/textView10"
-            android:layout_marginTop="16dp"
-            android:id="@+id/seekBar7" />
+            android:max="3"
+            android:progress="1"
+            android:id="@+id/seekBar11"
+            android:layout_marginTop="16dp" />
 
         <TextView
-            android:text="TextView"
+            android:text="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBar7"
             android:layout_alignEnd="@+id/textView18"
             android:id="@+id/textView19"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:textStyle="normal|bold"
+            android:textSize="20sp" />
 
         <TextView
             android:text="Soda(s) for lunch?"
@@ -87,21 +94,24 @@
             android:textSize="30sp" />
 
         <SeekBar
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView11"
-            android:layout_alignStart="@+id/textView11"
-            android:layout_marginTop="16dp"
-            android:id="@+id/seekBar8" />
+            android:max="3"
+            android:progress="1"
+            android:id="@+id/seekBar12"
+            android:layout_marginTop="16dp" />
 
         <TextView
-            android:text="TextView"
+            android:text="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/seekBar8"
             android:layout_alignEnd="@+id/textView19"
             android:id="@+id/textView20"
-            android:layout_marginTop="16dp" />
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="normal|bold" />
     </LinearLayout>
 
 </RelativeLayout>
