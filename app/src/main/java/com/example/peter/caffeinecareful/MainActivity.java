@@ -23,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
         final TextView textView = (TextView) findViewById(R.id.textView3);
         textView.setText(progressString);
 
-
-
-
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             public void onStopTrackingTouch(SeekBar seekBar){
 

@@ -13,4 +13,56 @@
     tools:context="com.example.peter.caffeinecareful.EveningActivity"
     tools:showIn="@layout/activity_evening">
 
+    <TextView
+        android:text="In how many hours will you sleep?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar4"
+        android:layout_alignStart="@+id/seekBar4"
+        android:layout_marginTop="46dp"
+        android:id="@+id/textView13"
+        android:textSize="30sp" />
+
+    <SeekBar
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_marginTop="25dp"
+        android:id="@+id/seekBar9"
+        android:layout_width="300dp" />
+
+    <TextView
+        android:text="How much caffiene have you had?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:id="@+id/textView12"
+        android:textSize="30sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:id="@+id/seekBar4"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar4"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView21" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBar9"
+        android:layout_alignEnd="@+id/textView21"
+        android:id="@+id/textView22" />
+
 </RelativeLayout>
