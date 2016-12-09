@@ -19,6 +19,9 @@ import java.io.InputStream;
 
 public class MainActivityBasic extends AppCompatActivity {
 
+    int CurrentLevel;
+    TextView level;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,56 +30,79 @@ public class MainActivityBasic extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-         SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar18);
-         int progress = seekBar.getProgress();
-         String progressString = Integer.toString(progress);
-         final TextView textView = (TextView) findViewById(R.id.textView26);
-         textView.setText(progressString);
+        SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar18);
+        int progress = seekBar.getProgress();
+        String progressString = Integer.toString(progress);
+        final TextView textView = (TextView) findViewById(R.id.textView26);
+        textView.setText(progressString);
 
-        TextView level = (TextView) findViewById(R.id.textView23) ;
+        level = (TextView) findViewById(R.id.textView23);
         level.setText(User.getLevelString());
 
-        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
-         public void onStopTrackingTouch(SeekBar seekBar){
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            public void onStopTrackingTouch(SeekBar seekBar) {
 
-         int CurrentLevel = seekBar.getProgress();
-         String CurrentLevelString = Integer.toString(CurrentLevel);
-         textView.setText(CurrentLevelString);
+                CurrentLevel = seekBar.getProgress();
+                String CurrentLevelString = Integer.toString(CurrentLevel);
+                textView.setText(CurrentLevelString + " ~16oz cup");
 
-         }
+            }
 
-         public void onStartTrackingTouch(SeekBar seekBar){}
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
 
-         public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser){}
-         });
-
-
-
-
-         Button morningButton = (Button) findViewById(R.id.button10);
-         morningButton.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View v) {
-        Intent myIntent = new Intent(MainActivityBasic.this, MorningActivity.class);
-        startActivity(myIntent);
-        }
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            }
         });
 
-         Button afternoonButton = (Button) findViewById(R.id.button11);
-         afternoonButton.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View v) {
-        Intent myIntent = new Intent(MainActivityBasic.this, AfternoonActivity.class);
-        startActivity(myIntent);
-        }
+        Button logButton = (Button) findViewById(R.id.button9);
+        logButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                if(CurrentLevel == 1){
+                    User.addCaffiene(37);
+                    level.setText(User.getLevelString());
+                } else if (CurrentLevel == 2){
+                    User.addCaffiene(75);
+                    level.setText(User.getLevelString());
+                } else if(CurrentLevel == 3){
+                    User.addCaffiene(113);
+                    level.setText(User.getLevelString());
+                } else {
+                    level.setText(User.getLevelString());
+                }
+
+                
+            }
         });
 
-         Button eveningButton = (Button) findViewById(R.id.button12);
-         eveningButton.setOnClickListener(new View.OnClickListener() {
-        @Override public void onClick(View v) {
-        Intent myIntent = new Intent(MainActivityBasic.this, EveningActivity.class);
-        startActivity(myIntent);
-        }
+
+        Button morningButton = (Button) findViewById(R.id.button10);
+        morningButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivityBasic.this, MorningActivity.class);
+                startActivity(myIntent);
+            }
         });
 
+        Button afternoonButton = (Button) findViewById(R.id.button11);
+        afternoonButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivityBasic.this, AfternoonActivity.class);
+                startActivity(myIntent);
+            }
+        });
+
+        Button eveningButton = (Button) findViewById(R.id.button12);
+        eveningButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivityBasic.this, EveningActivity.class);
+                startActivity(myIntent);
+            }
+        });
 
 
     }

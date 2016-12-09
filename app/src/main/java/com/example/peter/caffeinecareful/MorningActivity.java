@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.NavUtils;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -16,17 +17,6 @@ import android.widget.SeekBar;
 import android.widget.TextView;
 
 public class MorningActivity extends AppCompatActivity {
-
-    static int ans = 0;
-
-    private int predict(int tired, int hoursUntilLunch, double probSoda) {
-        if (tired <= 3) {
-            ans = 0;
-        } else {
-            ans = 1;
-        }
-        return ans;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,8 +93,7 @@ public class MorningActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                ans = predict(seekBar.getProgress(), 0,0);
-
+                final int ans = User.predictMorning(seekBar.getProgress(), seekBar2.getProgress(),seekBar3.getProgress());
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
@@ -114,7 +103,7 @@ public class MorningActivity extends AppCompatActivity {
                                         .setTitle("Drink coffee")
                                         .setMessage("Just know you'll be shorter tomorrow")
                                         .setCancelable(false)
-                                        .setPositiveButton("ok", new OnClickListener() {
+                                        .setPositiveButton("thanks", new OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 Intent intent = new Intent(MorningActivity.this, MainActivityBasic.class);
@@ -126,7 +115,7 @@ public class MorningActivity extends AppCompatActivity {
                                         .setTitle("Don't drink coffee")
                                         .setMessage("You probably shouldn't")
                                         .setCancelable(false)
-                                        .setPositiveButton("ok", new OnClickListener() {
+                                        .setPositiveButton("fine", new OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
                                                 Intent intent = new Intent(MorningActivity.this, MainActivityBasic.class);
