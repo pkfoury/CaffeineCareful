@@ -33,7 +33,10 @@ public class MainActivityBasic extends AppCompatActivity {
          final TextView textView = (TextView) findViewById(R.id.textView26);
          textView.setText(progressString);
 
-         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
+        TextView level = (TextView) findViewById(R.id.textView23) ;
+        level.setText(User.getLevelString());
+
+        seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
          public void onStopTrackingTouch(SeekBar seekBar){
 
          int CurrentLevel = seekBar.getProgress();

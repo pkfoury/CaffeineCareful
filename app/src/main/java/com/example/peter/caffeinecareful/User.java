@@ -6,6 +6,10 @@ package com.example.peter.caffeinecareful;
 
 public class User {
 
+    static double caffieneLevel = 27;
 
+    protected static String getLevelString(){
+        return ""+caffieneLevel+"%";
+    }
 
 }
