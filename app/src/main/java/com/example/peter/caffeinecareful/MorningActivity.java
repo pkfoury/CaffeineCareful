@@ -100,8 +100,8 @@ public class MorningActivity extends AppCompatActivity {
                         if (!isFinishing()) {
                             if (ans == 1) {
                                 new AlertDialog.Builder(MorningActivity.this)
-                                        .setTitle("Drink coffee")
-                                        .setMessage("Just know you'll be shorter tomorrow")
+                                        .setTitle("Pass")
+                                        .setMessage("Drink coffee")
                                         .setCancelable(false)
                                         .setPositiveButton("thanks", new OnClickListener() {
                                             @Override
@@ -112,8 +112,8 @@ public class MorningActivity extends AppCompatActivity {
                                         }).show();
                             } else if (ans == 0) {
                                 new AlertDialog.Builder(MorningActivity.this)
-                                        .setTitle("Don't drink coffee")
-                                        .setMessage("You probably shouldn't")
+                                        .setTitle("Fail")
+                                        .setMessage("Don't drink coffee")
                                         .setCancelable(false)
                                         .setPositiveButton("fine", new OnClickListener() {
                                             @Override
