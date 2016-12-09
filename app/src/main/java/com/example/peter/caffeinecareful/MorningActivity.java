@@ -63,6 +63,7 @@ public class MorningActivity extends AppCompatActivity {
                 String CurrentLevelString = Integer.toString(CurrentLevel);
                 TextView textView = (TextView) findViewById(R.id.textView14);
                 textView.setText(CurrentLevelString);
+
             }
 
             public void onStartTrackingTouch(SeekBar seekBar) {
