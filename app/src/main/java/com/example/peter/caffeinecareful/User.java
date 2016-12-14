@@ -19,17 +19,11 @@ public class User {
     }
 
     protected static int predictMorning(int tired, int hoursUntilLunch, int probSoda) {
-        if (tired > 4) {
-            if(hoursUntilLunch >= 2){
-                if(probSoda <= 2){
-                    return 1;
-                }
-            }
+        if (tired <= 3) {
+            ans = 0;
         } else {
-            return 0;
+            ans = 1;
         }
-
-
         return ans;
     }
 }
