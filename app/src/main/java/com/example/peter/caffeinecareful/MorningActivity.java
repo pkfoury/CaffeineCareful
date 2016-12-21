@@ -101,7 +101,7 @@ public class MorningActivity extends AppCompatActivity {
                             if (ans == 1) {
                                 new AlertDialog.Builder(MorningActivity.this)
                                         .setTitle("Drink coffee")
-                                        .setMessage("Just know you'll be shorter tomorrow")
+                                        .setMessage("Go crazy fam")
                                         .setCancelable(false)
                                         .setPositiveButton("thanks", new OnClickListener() {
                                             @Override
