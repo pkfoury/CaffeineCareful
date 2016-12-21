@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.io.File;
 import java.io.InputStream;
 
 public class MainActivityBasic extends AppCompatActivity {
