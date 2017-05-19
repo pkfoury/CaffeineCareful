@@ -27,6 +27,7 @@ public class MorningActivity extends AppCompatActivity {
 
 
         final SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar15);
+        //final int CurrentLevel = seekBar.getProgress();
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             public void onStopTrackingTouch(SeekBar seekBar) {
                 int CurrentLevel = seekBar.getProgress();
@@ -106,8 +107,9 @@ public class MorningActivity extends AppCompatActivity {
                                         .setPositiveButton("thanks", new OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
-                                                Intent intent = new Intent(MorningActivity.this, MainActivityBasic.class);
-                                                startActivity(intent);
+                                                NavUtils.navigateUpFromSameTask(MorningActivity.this);
+                                                //Intent intent = new Intent(MorningActivity.this, MainActivityBasic.class);
+                                                //startActivity(intent);
                                             }
                                         }).show();
                             } else if (ans == 0) {
@@ -118,8 +120,9 @@ public class MorningActivity extends AppCompatActivity {
                                         .setPositiveButton("fine", new OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
-                                                Intent intent = new Intent(MorningActivity.this, MainActivityBasic.class);
-                                                startActivity(intent);
+                                                NavUtils.navigateUpFromSameTask(MorningActivity.this);
+                                                //Intent intent = new Intent(MorningActivity.this, MainActivityBasic.class);
+                                                //startActivity(intent);
                                             }
                                         }).show();
                             }

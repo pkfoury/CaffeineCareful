@@ -1,5 +1,7 @@
 package com.example.peter.caffeinecareful;
 
+import android.content.Context;
+
 /**
  * Created by peter on 12/8/2016.
  */
@@ -9,6 +11,7 @@ public class User {
     static int limit = 340;
     static int caffieneLevel = 0;
     static int ans = 0;
+    //Context context =
 
     protected static String getLevelString(){
         return ""+caffieneLevel+"%";
@@ -26,4 +29,6 @@ public class User {
         }
         return ans;
     }
+
+
 }

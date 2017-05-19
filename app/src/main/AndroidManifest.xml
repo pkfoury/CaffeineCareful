@@ -20,10 +20,12 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AfternoonActivity"
+            android:parentActivityName=".MainActivityBasic"
             android:label="@string/title_activity_afternoon"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".EveningActivity"
+            android:parentActivityName=".MainActivityBasic"
             android:label="@string/title_activity_evening"
             android:theme="@style/AppTheme.NoActionBar" />
 

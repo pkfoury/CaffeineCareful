@@ -33,7 +33,7 @@ public class MainActivityBasic extends AppCompatActivity {
 
         SeekBar seekBar = (SeekBar) findViewById(R.id.seekBar18);
         int progress = seekBar.getProgress();
-        String progressString = Integer.toString(progress);
+        String progressString = Integer.toString(progress) + " ~16oz cup";
         final TextView textView = (TextView) findViewById(R.id.textView26);
         textView.setText(progressString);
 
